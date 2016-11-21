@@ -34,7 +34,7 @@ static NSString *URL_GET_BOARD_POST_POWER   = @"http://dian.hust.edu.cn:81/bbsps
 static NSString *URL_REPRINT                = @"http://dian.hust.edu.cn:81/bbsccc";
 
 static const NSInteger maxRequestCount = 2;
-static const NSTimeInterval requestTimeOut = 5;
+//static const NSTimeInterval requestTimeOut = 5;
 
 @interface YuXinSDK()
 
@@ -557,7 +557,7 @@ static const NSTimeInterval requestTimeOut = 5;
     NSURL *url = [NSURL URLWithString:completeUrlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:method];
-    [request setTimeoutInterval:requestTimeOut];
+//    [request setTimeoutInterval:requestTimeOut];
     [request setValue:@"Keep-Alive" forHTTPHeaderField:@"Connection"];
     if (cookie) {
         [request setValue:cookie forHTTPHeaderField:@"Cookie"];
